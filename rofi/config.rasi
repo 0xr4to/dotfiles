@@ -1,0 +1,100 @@
+configuration {
+    mode:               "drun";
+    font:               "AnonymicePro Nerd Font 14";
+    show-icons:         true;
+    scrollbar:          false;
+}
+
+/* {
+    selected-active-foreground:
+    urgent-foreground:
+    alternate-urgent-background:
+    background-color:
+    normal-background:
+    border-color:
+    selected-urgent-background:
+    alternate-active-background:
+    altarnate-normal-foreground:
+    active-foreground:
+    background:
+    selected-active
+
+}*/
+
+window{
+    width:              525px;
+    height:             505px;
+    border:             1px;
+    border-color:       #e6e1dc;
+    border-radius:      9px;
+    background-color:   #101010;
+}
+
+element {
+    padding:            10px;
+    margin:             2px;
+    border-color:       #e6e1dc;
+    border-radius:      4px;
+}
+
+element normal.normal, element alternate.normal{
+    background-color:   #26262680;
+}
+
+element selected.normal{
+    background-color:   #464646cc;
+}
+
+element-text {
+    color:              #e6e1dc;
+}
+
+element-icon {
+    size:               30px;
+}
+
+mainbox {
+    padding:            5px;
+    border:             0px;
+}
+
+textbox {
+    text-color:         #ddc7a1;
+}
+
+listview {
+    scrollbar:          false;
+
+}
+
+num-filtered-rows, num-rows, textbox-num-sep {
+    expand:             false;
+    text-color:         #e6e1dc;
+}
+
+inputbar {
+    padding:            5px;
+    text-color:         #e6e1dc;
+    spacing:            5px;
+}
+
+entry {
+    text-color:         #e6e1dc;
+    cursor:             text;
+    placeholder-color:  #e6e1dc;
+    placeholder:        "Type here";
+}
+
+prompt{
+    text-color:         #e6e1dc;
+}
+
+/*window {
+    width:                      525px;
+    height:                     350px;
+    border:                     1px;
+    border-color:               #665c54;
+    border-radius:              8px;
+    background-color:           transparent;
+}*/
+

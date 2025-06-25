@@ -1,0 +1,20 @@
+# Global options
+
+max-history=2
+output=eDP-1
+
+# Style options
+
+font=AnonymicePro Nerd Font
+background-color=#e6e1edcc
+text-color=#050505
+border-radius=9
+width=300
+height=110
+padding=6,6,6,6
+border-color=#050505
+border-size=2
+margin=8
+
+# How long should the popup be up (ms)
+default-timeout=3000

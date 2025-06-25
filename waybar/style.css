@@ -1,0 +1,112 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "AnonymicePro Nerd Font", "monospace";
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Arch icon on the left side */
+#custom-icon {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 9px 0px 0px 9px;
+    padding-left: 9px;
+    margin-top: 6px;
+    margin-left: 9px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+/* workspaces settings */
+#workspaces {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 0px 9px 9px 0px;
+    margin-top: 6px;
+    padding: 3px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+#workspaces button{ /* not active */
+    padding: 5px 5px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    color: rgba(230, 225, 220, 1.0);
+}
+
+#workspaces button.active{
+    background: rgba(70, 70, 70, 1.0);
+    border-radius: 9px;
+}
+
+#workspaces button:hover{
+    background: rgba(70, 70, 70, 1.0);
+    border-radius: 9px;
+    color: transparent;
+}
+/* End workspaces settings */
+
+/* spotify module */
+#custom-spotify {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 6px;
+    margin-left: 6px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+/* middle module clock */
+#clock {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 9px ;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 6px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+/* tray right side */
+#tray {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 9px ;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 6px;
+    margin-right: 6px;
+}
+
+/* pacman packages for download */
+#custom-pacman{
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 9px 0px 0px 9px;
+    padding-left: 9px;
+    margin-top: 6px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+/* far right modules */
+#backlight,
+#pulseaudio,
+#battery,
+#network{
+    background: rgba(38, 38, 38, 1.0);
+    padding-left: 9px;
+    margin-top: 6px;
+    color: rgba(230, 225, 220, 1.0);
+}
+
+/* poweroff */
+#custom-power {
+    background: rgba(38, 38, 38, 1.0);
+    border-radius: 0px 9px 9px 0px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 6px;
+    margin-right: 9px;
+    color: rgba(230, 225, 220, 1.0);
+}
