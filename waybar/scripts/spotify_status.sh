@@ -36,8 +36,8 @@ if [ "${#title}" -gt "$max_title_length" ]; then
 fi
 
 # Ícones
-icon_play=""
-icon_pause=""
+icon_play=""
+icon_pause=""
 
 # Texto final
 output="$artist - $title [$pos_fmt/$dur_fmt]"
