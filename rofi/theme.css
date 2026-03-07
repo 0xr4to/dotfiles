@@ -1,0 +1,141 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 2.0.0
+ **/
+* {
+  
+    black:                          #0B090A;
+    carbonBlack:                    #161A1D;
+    darkGarnet:                     #660708;
+    mahoganyRed:                    #A4161A;
+    mahoganyLRed:                   #BA181B;
+    strawberryRed:                  #E5383B;
+    silver:                         #B1A7A6;
+    dustGrey:                       #D3D3D3;
+    whiteSmoke:                     #F5F3F4;
+    white:                          #FFFFFF;
+
+    background:                     var(black);
+    background-color:               transparent;
+}
+element {
+    padding: 1px ;
+    cursor:  pointer;
+    spacing: 5px ;
+    border:  0;
+}
+element normal.normal {
+    background-color:   var(carbonBlack);
+    text-color:         var(white);
+}
+
+element normal.active {
+    background-color:   var(carbonBlack);
+    text-color:         var(white);
+}
+
+element selected.normal {
+    background-color:   var(mahoganyRed);
+    text-color:         var(white);
+}
+
+element alternate.normal {
+    background-color:   var(carbonBlack);
+    text-color:         var(white);
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         var(white);
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               1.0000em ;
+    cursor:             inherit;
+    text-color:         inherit;
+}
+
+window {
+    padding:            5;
+    background-color:   var(black);
+    border:             2;
+    border-radius:      9;
+    width:              425px;
+    height:             325px;
+}
+mainbox {
+    padding:            0;
+    border:             0;
+}
+message {
+    padding:            1px ;
+    border-color:       var(strawberryRed);
+    border:             2px dash 0px 0px ;
+}
+textbox {
+    text-color:         var(white);
+}
+listview {
+    padding:            2px 0px 0px ;
+    scrollbar:          false;
+    border-color:       var(strawberryRed);
+    spacing:            2px ;
+    fixed-height:       0;
+    border:             2px solid 0px 0px ;
+}
+button {
+    cursor:             pointer;
+    spacing:            0;
+    text-color:         var(white);
+}
+button selected {
+    background-color:   var(black);
+    text-color:         var(white);
+}
+/*num-filtered-rows {
+    expand:             false;
+    text-color:         dustGrey;
+}
+num-rows {
+    expand:             false;
+    text-color:         dustGrey;
+}
+textbox-num-sep {
+    expand:             false;
+    str:                "/";
+    text-color:         dustGrey;
+}*/
+inputbar {
+    padding:            1px ;
+    spacing:            0px ;
+    text-color:         var(white);
+    children:           [ "prompt","textbox-prompt-colon","entry","overlay","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+}
+overlay {
+    padding:            0px 0.2000em ;
+    background-color:   var(black);
+    foreground-color:   var(white);
+    margin:             0px 0.2000em ;
+    text-color:         var(white);
+}
+case-indicator {
+    spacing:            0;
+    text-color:         var(white);
+}
+entry {
+    text-color:         var(white);
+    cursor:             text;
+    spacing:            0;
+    placeholder-color:  var(dustGrey);
+    placeholder:        "I USE ARCH BTW";
+}
+prompt {
+    spacing:            0;
+    text-color:         var(white);
+}
+textbox-prompt-colon {
+    margin:             0px 0.3000em 0.0000em 0.0000em ;
+    expand:             false;
+    text-color:         inherit;
+}
