@@ -1,0 +1,121 @@
+{
+    "layer": "top",
+    "output": ["HDMI-A-2"],
+    "position": "top",
+    "mod": "dock",
+    "height": 42,
+    "exclusive": true,
+    "passthrough" : false,
+    "modules-left": ["custom/icon","hyprland/workspaces", "custom/spotify"],
+    "modules-center": ["clock"],
+    "modules-right" : ["tray","custom/pacman","pulseaudio","network", "custom/suspend", "custom/power"],
+
+  
+    "custom/icon" : {
+        "format" : " {}"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs" : true,
+        "disable-scroll" : true
+    },
+
+    "custom/spotify": {
+        "exec": "~/.config/waybar/scripts/spotify_status.sh",
+        "interval" : 1,
+        "format" : "{}",
+        "tooltip": false,
+        "on-click": "playerctl --player=spotify play-pause"
+    },
+
+    "clock" : {
+    "format": "{:%d %A - %H:%M %p}",
+    "interval" : 1,
+    "tooltip-format" : "<small><tt>{calendar}</tt></small>",
+    "timezones" : ["America/Sao_Paulo"],
+    "calendar" : {
+       "mode" : "month",
+       "mode-mon-col" : 3,
+       "on-scroll" : 1,
+       "format" : {
+           "months" : "<span color='#fe8019'><b>{}</b></span>",
+	       "days" : "<span color='#d3869b'><b>{}</b></span>",
+           "weekdays" : "<span color='#fabd2f'><b>{}</b></span>",
+           "today" : "<span color='#b8bb26'><b>{}</b></span>"
+        }
+    },
+    "actions" : {
+        "on-click-right" : "mode",
+	    "on-scroll-up" : "shift_up",
+	    "on-scroll-down" : "shift_down"
+    }
+    },
+
+    "tray": {
+        "icon-size" : 18,
+        "spacing" : 9
+    },
+
+    "custom/pacman": {
+        "format": "󰮯 {}",
+        "interval": 10,   
+        "exec": "checkupdates | wc -l",
+        "exec-if": "exit 0",
+        "signal": 8,
+        "tooltip": false
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}{percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "min-length": 6
+    },
+
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "default": [" "," ", " ", "  "]
+        }
+    },
+
+    "network": {
+        "format-ethernet":"󰲝 ",
+        "format-disconnected": " ",
+        "tooltip-format-disconnected": "Error",
+        "tooltip-format-ethernet": "{ifname} 🖧 ",
+        "on-click": "nm-connection-editor"
+    },
+
+    "custom/suspend" : {
+        "format" : "󰤁 {}",
+        "rotate" : 0,
+        "on-click" : "kitty ~/.config/waybar/scripts/suspend.sh",
+        "interval" : 86400,
+        "tooltip" : true,
+        "tooltip-format" : "suspend"
+    },
+
+    "custom/power": {
+       "format": "{}",
+       "rotate": 0,
+        "on-click": "kitty ~/.config/waybar/scripts/power.sh",
+        "interval": 86400,
+        "tooltip": true,
+	"tooltip-format": "poweroff"
+  }
+}
