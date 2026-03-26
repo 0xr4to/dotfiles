@@ -2,17 +2,24 @@ autostart/
 corectrl/
 dconf/
 discord/
+gtk-4.0/assets
+gtk-4.0/gtk-dark.css
+gtk-4.0/gtk.css
 htop/
 keepassxc/
 mozilla/
 mpv/
+Mullvad VPN/
 nautilus/
 nwg-look/
 obs-studio/
+Proton/
 pulse/
 systemd/
+spotify/
+torbrowser/
+VirtualBox/
 zen/
 QtProject.conf
-config
 mimeapps.list
 pavucontrol.ini
