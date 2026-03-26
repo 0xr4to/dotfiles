@@ -1,0 +1,17 @@
+# Global options
+
+max-history=2
+
+# Style options
+
+font=OpenDyslexicM Nerd Font
+background-color=#00000090
+text-color=#e6e1dc
+border-radius=3
+padding=6,6,6,6
+border-color=#780000
+border-size=1
+margin=9
+
+# How long should the popup be up (ms)
+default-timeout=3000
