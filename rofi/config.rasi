@@ -1,8 +1,8 @@
 configuration {
-	modes:                  "combi";
-    combi-modes:            "window, run, drun";
+	modes:                  [window, run, drun];
 	font:                   "OpenDyslexicM Nerd Font 10";
     show-icons:             true;
+    icon-theme:             "Tela-circle-black-dark";
     scrollbar:              false;
     drun{
         display-name: " :";
