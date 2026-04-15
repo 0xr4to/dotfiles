@@ -29,22 +29,31 @@ require('lazy').setup({
 
     -- Mason
     {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {},
-        dependencies = {
-            { "mason-org/mason.nvim", opts = {} }
-        },
+        "mason-org/mason.nvim",
         config = function()
             require("plugins.mason")
         end
     },
 
-    -- LSP
+    -- Mason LSP config
+    {
+        "mason-org/mason-lspconfig.nvim",
+        dependencies = {"mason-org/mason.nvim"},
+        config = function()
+            require("plugins.mason-lspconfig")
+        end
+    },
+
+    -- nvim LSP
     {
         "neovim/nvim-lspconfig",
-        config = function()
-            require("plugins.lsp")
-        end
+        dependencies = {
+            "mason-org/mason.nvim",
+            "mason-org/mason-lspconfig.nvim"
+        },
+        --config = function()
+        --    require("plugins.lspconfig")
+        --end
     },
 
     -- Auto completion
